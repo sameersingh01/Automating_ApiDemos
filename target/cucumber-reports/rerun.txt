@@ -1,0 +1,1 @@
+show.feature:5 stopalarmservice.feature:5 zoomIn.feature:6 hide.feature:5 startalarmservice.feature:5

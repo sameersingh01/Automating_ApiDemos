@@ -1,0 +1,782 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="5" passed="0" failed="5" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-07-30T19:08:44Z" name="Default suite" finished-at="2022-07-30T19:09:24Z" duration-ms="40319">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:runnerfile.TestRunner@6f10d5b6]" name="feature" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test started-at="2022-07-30T19:08:44Z" name="Default test" finished-at="2022-07-30T19:09:24Z" duration-ms="40319">
+      <class name="runnerfile.TestRunner">
+        <test-method is-config="true" signature="setup()[pri:0, instance:runnerfile.TestRunner@6f10d5b6]" started-at="2022-07-31T00:38:42Z" name="setup" finished-at="2022-07-31T00:38:44Z" duration-ms="2054" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:runnerfile.TestRunner@6f10d5b6]" started-at="2022-07-31T00:38:44Z" name="setUpClass" finished-at="2022-07-31T00:38:44Z" duration-ms="180" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method is-config="true" signature="startTest(java.lang.reflect.Method)[pri:0, instance:runnerfile.TestRunner@6f10d5b6]" started-at="2022-07-31T00:38:44Z" name="startTest" finished-at="2022-07-31T00:38:44Z" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void cucumber.api.testng.AbstractTestNGCucumberTests.feature(cucumber.api.testng.CucumberFeatureWrapper)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTest -->
+        <test-method signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:runnerfile.TestRunner@6f10d5b6]" started-at="2022-07-31T00:38:44Z" name="feature" description="Runs Cucumber Feature" data-provider="features" finished-at="2022-07-31T00:38:55Z" duration-ms="10909" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Hide feature]]>
+              </value>
+            </param>
+          </params>
+          <exception class="cucumber.runtime.CucumberException">
+            <message>
+              <![CDATA[java.lang.ExceptionInInitializerError]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[cucumber.runtime.CucumberException: java.lang.ExceptionInInitializerError
+	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:69)
+	at cucumber.api.testng.AbstractTestNGCucumberTests.feature(AbstractTestNGCucumberTests.java:21)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.lang.ExceptionInInitializerError
+	at cucumber.deps.com.thoughtworks.xstream.XStream.setupConverters(XStream.java:820)
+	at cucumber.deps.com.thoughtworks.xstream.XStream.<init>(XStream.java:574)
+	at cucumber.deps.com.thoughtworks.xstream.XStream.<init>(XStream.java:530)
+	at cucumber.runtime.xstream.LocalizedXStreams$LocalizedXStream.<init>(LocalizedXStreams.java:50)
+	at cucumber.runtime.xstream.LocalizedXStreams.newXStream(LocalizedXStreams.java:37)
+	at cucumber.runtime.xstream.LocalizedXStreams.get(LocalizedXStreams.java:29)
+	at cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:37)
+	at cucumber.runtime.Runtime.runStep(Runtime.java:300)
+	at cucumber.runtime.model.StepContainer.runStep(StepContainer.java:44)
+	at cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:39)
+	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:44)
+	at cucumber.runtime.model.CucumberFeature.run(CucumberFeature.java:165)
+	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:63)
+	at cucumber.api.testng.AbstractTestNGCucumberTests.feature(AbstractTestNGCucumberTests.java:21)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+	at ✽.Given User is in Interface and clicks on Animation button(hide.feature:6)
+Caused by: java.lang.reflect.InaccessibleObjectException: Unable to make field private final java.util.Comparator java.util.TreeMap.comparator accessible: module java.base does not "opens java.util" to unnamed module @32a1bec0
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:354)
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:297)
+	at java.base/java.lang.reflect.Field.checkCanSetAccessible(Field.java:180)
+	at java.base/java.lang.reflect.Field.setAccessible(Field.java:174)
+	at cucumber.deps.com.thoughtworks.xstream.core.util.Fields.locate(Fields.java:39)
+	at cucumber.deps.com.thoughtworks.xstream.converters.collections.TreeMapConverter.<clinit>(TreeMapConverter.java:50)
+	at cucumber.deps.com.thoughtworks.xstream.XStream.setupConverters(XStream.java:820)
+	at cucumber.deps.com.thoughtworks.xstream.XStream.<init>(XStream.java:574)
+	at cucumber.deps.com.thoughtworks.xstream.XStream.<init>(XStream.java:530)
+	at cucumber.runtime.xstream.LocalizedXStreams$LocalizedXStream.<init>(LocalizedXStreams.java:50)
+	at cucumber.runtime.xstream.LocalizedXStreams.newXStream(LocalizedXStreams.java:37)
+	at cucumber.runtime.xstream.LocalizedXStreams.get(LocalizedXStreams.java:29)
+	at cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:37)
+	at cucumber.runtime.Runtime.runStep(Runtime.java:300)
+	at cucumber.runtime.model.StepContainer.runStep(StepContainer.java:44)
+	at cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:39)
+	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:44)
+	at cucumber.runtime.model.CucumberFeature.run(CucumberFeature.java:165)
+	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:63)
+	at cucumber.api.testng.AbstractTestNGCucumberTests.feature(AbstractTestNGCucumberTests.java:21)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- cucumber.runtime.CucumberException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method is-config="true" signature="reportFlush(org.testng.ITestResult)[pri:0, instance:runnerfile.TestRunner@6f10d5b6]" started-at="2022-07-31T00:38:55Z" name="reportFlush" finished-at="2022-07-31T00:38:55Z" duration-ms="278" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=feature status=FAILURE method=AbstractTestNGCucumberTests.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:runnerfile.TestRunner@6f10d5b6] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reportFlush -->
+        <test-method signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:runnerfile.TestRunner@6f10d5b6]" started-at="2022-07-31T00:38:55Z" name="feature" description="Runs Cucumber Feature" data-provider="features" finished-at="2022-07-31T00:39:03Z" duration-ms="7669" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Show feature]]>
+              </value>
+            </param>
+          </params>
+          <exception class="cucumber.runtime.CucumberException">
+            <message>
+              <![CDATA[java.lang.NoClassDefFoundError: Could not initialize class cucumber.deps.com.thoughtworks.xstream.converters.collections.TreeMapConverter]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[cucumber.runtime.CucumberException: java.lang.NoClassDefFoundError: Could not initialize class cucumber.deps.com.thoughtworks.xstream.converters.collections.TreeMapConverter
+	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:69)
+	at cucumber.api.testng.AbstractTestNGCucumberTests.feature(AbstractTestNGCucumberTests.java:21)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.lang.NoClassDefFoundError: Could not initialize class cucumber.deps.com.thoughtworks.xstream.converters.collections.TreeMapConverter
+	at cucumber.deps.com.thoughtworks.xstream.XStream.setupConverters(XStream.java:820)
+	at cucumber.deps.com.thoughtworks.xstream.XStream.<init>(XStream.java:574)
+	at cucumber.deps.com.thoughtworks.xstream.XStream.<init>(XStream.java:530)
+	at cucumber.runtime.xstream.LocalizedXStreams$LocalizedXStream.<init>(LocalizedXStreams.java:50)
+	at cucumber.runtime.xstream.LocalizedXStreams.newXStream(LocalizedXStreams.java:37)
+	at cucumber.runtime.xstream.LocalizedXStreams.get(LocalizedXStreams.java:29)
+	at cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:37)
+	at cucumber.runtime.Runtime.runStep(Runtime.java:300)
+	at cucumber.runtime.model.StepContainer.runStep(StepContainer.java:44)
+	at cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:39)
+	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:44)
+	at cucumber.runtime.model.CucumberFeature.run(CucumberFeature.java:165)
+	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:63)
+	at cucumber.api.testng.AbstractTestNGCucumberTests.feature(AbstractTestNGCucumberTests.java:21)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+	at ✽.Given User is in Api Demos and clicks on Animation button(show.feature:6)
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.reflect.InaccessibleObjectException: Unable to make field private final java.util.Comparator java.util.TreeMap.comparator accessible: module java.base does not "opens java.util" to unnamed module @32a1bec0 [in thread "main"]
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:354)
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:297)
+	at java.base/java.lang.reflect.Field.checkCanSetAccessible(Field.java:180)
+	at java.base/java.lang.reflect.Field.setAccessible(Field.java:174)
+	at cucumber.deps.com.thoughtworks.xstream.core.util.Fields.locate(Fields.java:39)
+	at cucumber.deps.com.thoughtworks.xstream.converters.collections.TreeMapConverter.<clinit>(TreeMapConverter.java:50)
+	at cucumber.deps.com.thoughtworks.xstream.XStream.setupConverters(XStream.java:820)
+	at cucumber.deps.com.thoughtworks.xstream.XStream.<init>(XStream.java:574)
+	at cucumber.deps.com.thoughtworks.xstream.XStream.<init>(XStream.java:530)
+	at cucumber.runtime.xstream.LocalizedXStreams$LocalizedXStream.<init>(LocalizedXStreams.java:50)
+	at cucumber.runtime.xstream.LocalizedXStreams.newXStream(LocalizedXStreams.java:37)
+	at cucumber.runtime.xstream.LocalizedXStreams.get(LocalizedXStreams.java:29)
+	at cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:37)
+	at cucumber.runtime.Runtime.runStep(Runtime.java:300)
+	at cucumber.runtime.model.StepContainer.runStep(StepContainer.java:44)
+	at cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:39)
+	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:44)
+	at cucumber.runtime.model.CucumberFeature.run(CucumberFeature.java:165)
+	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:63)
+	at cucumber.api.testng.AbstractTestNGCucumberTests.feature(AbstractTestNGCucumberTests.java:21)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- cucumber.runtime.CucumberException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method is-config="true" signature="startTest(java.lang.reflect.Method)[pri:0, instance:runnerfile.TestRunner@6f10d5b6]" started-at="2022-07-31T00:38:55Z" name="startTest" finished-at="2022-07-31T00:38:55Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void cucumber.api.testng.AbstractTestNGCucumberTests.feature(cucumber.api.testng.CucumberFeatureWrapper)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTest -->
+        <test-method is-config="true" signature="reportFlush(org.testng.ITestResult)[pri:0, instance:runnerfile.TestRunner@6f10d5b6]" started-at="2022-07-31T00:39:03Z" name="reportFlush" finished-at="2022-07-31T00:39:03Z" duration-ms="37" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=feature status=FAILURE method=AbstractTestNGCucumberTests.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:runnerfile.TestRunner@6f10d5b6] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reportFlush -->
+        <test-method is-config="true" signature="startTest(java.lang.reflect.Method)[pri:0, instance:runnerfile.TestRunner@6f10d5b6]" started-at="2022-07-31T00:39:03Z" name="startTest" finished-at="2022-07-31T00:39:03Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void cucumber.api.testng.AbstractTestNGCucumberTests.feature(cucumber.api.testng.CucumberFeatureWrapper)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTest -->
+        <test-method signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:runnerfile.TestRunner@6f10d5b6]" started-at="2022-07-31T00:39:03Z" name="feature" description="Runs Cucumber Feature" data-provider="features" finished-at="2022-07-31T00:39:11Z" duration-ms="7813" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Start alarm service feature]]>
+              </value>
+            </param>
+          </params>
+          <exception class="cucumber.runtime.CucumberException">
+            <message>
+              <![CDATA[java.lang.NoClassDefFoundError: Could not initialize class cucumber.deps.com.thoughtworks.xstream.converters.collections.TreeMapConverter]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[cucumber.runtime.CucumberException: java.lang.NoClassDefFoundError: Could not initialize class cucumber.deps.com.thoughtworks.xstream.converters.collections.TreeMapConverter
+	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:69)
+	at cucumber.api.testng.AbstractTestNGCucumberTests.feature(AbstractTestNGCucumberTests.java:21)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.lang.NoClassDefFoundError: Could not initialize class cucumber.deps.com.thoughtworks.xstream.converters.collections.TreeMapConverter
+	at cucumber.deps.com.thoughtworks.xstream.XStream.setupConverters(XStream.java:820)
+	at cucumber.deps.com.thoughtworks.xstream.XStream.<init>(XStream.java:574)
+	at cucumber.deps.com.thoughtworks.xstream.XStream.<init>(XStream.java:530)
+	at cucumber.runtime.xstream.LocalizedXStreams$LocalizedXStream.<init>(LocalizedXStreams.java:50)
+	at cucumber.runtime.xstream.LocalizedXStreams.newXStream(LocalizedXStreams.java:37)
+	at cucumber.runtime.xstream.LocalizedXStreams.get(LocalizedXStreams.java:29)
+	at cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:37)
+	at cucumber.runtime.Runtime.runStep(Runtime.java:300)
+	at cucumber.runtime.model.StepContainer.runStep(StepContainer.java:44)
+	at cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:39)
+	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:44)
+	at cucumber.runtime.model.CucumberFeature.run(CucumberFeature.java:165)
+	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:63)
+	at cucumber.api.testng.AbstractTestNGCucumberTests.feature(AbstractTestNGCucumberTests.java:21)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+	at ✽.Given User is in ApiDemos and clicks on App(startalarmservice.feature:6)
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.reflect.InaccessibleObjectException: Unable to make field private final java.util.Comparator java.util.TreeMap.comparator accessible: module java.base does not "opens java.util" to unnamed module @32a1bec0 [in thread "main"]
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:354)
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:297)
+	at java.base/java.lang.reflect.Field.checkCanSetAccessible(Field.java:180)
+	at java.base/java.lang.reflect.Field.setAccessible(Field.java:174)
+	at cucumber.deps.com.thoughtworks.xstream.core.util.Fields.locate(Fields.java:39)
+	at cucumber.deps.com.thoughtworks.xstream.converters.collections.TreeMapConverter.<clinit>(TreeMapConverter.java:50)
+	at cucumber.deps.com.thoughtworks.xstream.XStream.setupConverters(XStream.java:820)
+	at cucumber.deps.com.thoughtworks.xstream.XStream.<init>(XStream.java:574)
+	at cucumber.deps.com.thoughtworks.xstream.XStream.<init>(XStream.java:530)
+	at cucumber.runtime.xstream.LocalizedXStreams$LocalizedXStream.<init>(LocalizedXStreams.java:50)
+	at cucumber.runtime.xstream.LocalizedXStreams.newXStream(LocalizedXStreams.java:37)
+	at cucumber.runtime.xstream.LocalizedXStreams.get(LocalizedXStreams.java:29)
+	at cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:37)
+	at cucumber.runtime.Runtime.runStep(Runtime.java:300)
+	at cucumber.runtime.model.StepContainer.runStep(StepContainer.java:44)
+	at cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:39)
+	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:44)
+	at cucumber.runtime.model.CucumberFeature.run(CucumberFeature.java:165)
+	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:63)
+	at cucumber.api.testng.AbstractTestNGCucumberTests.feature(AbstractTestNGCucumberTests.java:21)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- cucumber.runtime.CucumberException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method is-config="true" signature="reportFlush(org.testng.ITestResult)[pri:0, instance:runnerfile.TestRunner@6f10d5b6]" started-at="2022-07-31T00:39:11Z" name="reportFlush" finished-at="2022-07-31T00:39:11Z" duration-ms="30" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=feature status=FAILURE method=AbstractTestNGCucumberTests.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:runnerfile.TestRunner@6f10d5b6] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reportFlush -->
+        <test-method is-config="true" signature="startTest(java.lang.reflect.Method)[pri:0, instance:runnerfile.TestRunner@6f10d5b6]" started-at="2022-07-31T00:39:11Z" name="startTest" finished-at="2022-07-31T00:39:11Z" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void cucumber.api.testng.AbstractTestNGCucumberTests.feature(cucumber.api.testng.CucumberFeatureWrapper)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTest -->
+        <test-method signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:runnerfile.TestRunner@6f10d5b6]" started-at="2022-07-31T00:39:11Z" name="feature" description="Runs Cucumber Feature" data-provider="features" finished-at="2022-07-31T00:39:18Z" duration-ms="6682" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Stop alarm service feature]]>
+              </value>
+            </param>
+          </params>
+          <exception class="cucumber.runtime.CucumberException">
+            <message>
+              <![CDATA[java.lang.NoClassDefFoundError: Could not initialize class cucumber.deps.com.thoughtworks.xstream.converters.collections.TreeMapConverter]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[cucumber.runtime.CucumberException: java.lang.NoClassDefFoundError: Could not initialize class cucumber.deps.com.thoughtworks.xstream.converters.collections.TreeMapConverter
+	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:69)
+	at cucumber.api.testng.AbstractTestNGCucumberTests.feature(AbstractTestNGCucumberTests.java:21)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.lang.NoClassDefFoundError: Could not initialize class cucumber.deps.com.thoughtworks.xstream.converters.collections.TreeMapConverter
+	at cucumber.deps.com.thoughtworks.xstream.XStream.setupConverters(XStream.java:820)
+	at cucumber.deps.com.thoughtworks.xstream.XStream.<init>(XStream.java:574)
+	at cucumber.deps.com.thoughtworks.xstream.XStream.<init>(XStream.java:530)
+	at cucumber.runtime.xstream.LocalizedXStreams$LocalizedXStream.<init>(LocalizedXStreams.java:50)
+	at cucumber.runtime.xstream.LocalizedXStreams.newXStream(LocalizedXStreams.java:37)
+	at cucumber.runtime.xstream.LocalizedXStreams.get(LocalizedXStreams.java:29)
+	at cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:37)
+	at cucumber.runtime.Runtime.runStep(Runtime.java:300)
+	at cucumber.runtime.model.StepContainer.runStep(StepContainer.java:44)
+	at cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:39)
+	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:44)
+	at cucumber.runtime.model.CucumberFeature.run(CucumberFeature.java:165)
+	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:63)
+	at cucumber.api.testng.AbstractTestNGCucumberTests.feature(AbstractTestNGCucumberTests.java:21)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+	at ✽.Given User clicks on App(stopalarmservice.feature:6)
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.reflect.InaccessibleObjectException: Unable to make field private final java.util.Comparator java.util.TreeMap.comparator accessible: module java.base does not "opens java.util" to unnamed module @32a1bec0 [in thread "main"]
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:354)
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:297)
+	at java.base/java.lang.reflect.Field.checkCanSetAccessible(Field.java:180)
+	at java.base/java.lang.reflect.Field.setAccessible(Field.java:174)
+	at cucumber.deps.com.thoughtworks.xstream.core.util.Fields.locate(Fields.java:39)
+	at cucumber.deps.com.thoughtworks.xstream.converters.collections.TreeMapConverter.<clinit>(TreeMapConverter.java:50)
+	at cucumber.deps.com.thoughtworks.xstream.XStream.setupConverters(XStream.java:820)
+	at cucumber.deps.com.thoughtworks.xstream.XStream.<init>(XStream.java:574)
+	at cucumber.deps.com.thoughtworks.xstream.XStream.<init>(XStream.java:530)
+	at cucumber.runtime.xstream.LocalizedXStreams$LocalizedXStream.<init>(LocalizedXStreams.java:50)
+	at cucumber.runtime.xstream.LocalizedXStreams.newXStream(LocalizedXStreams.java:37)
+	at cucumber.runtime.xstream.LocalizedXStreams.get(LocalizedXStreams.java:29)
+	at cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:37)
+	at cucumber.runtime.Runtime.runStep(Runtime.java:300)
+	at cucumber.runtime.model.StepContainer.runStep(StepContainer.java:44)
+	at cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:39)
+	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:44)
+	at cucumber.runtime.model.CucumberFeature.run(CucumberFeature.java:165)
+	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:63)
+	at cucumber.api.testng.AbstractTestNGCucumberTests.feature(AbstractTestNGCucumberTests.java:21)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- cucumber.runtime.CucumberException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method is-config="true" signature="reportFlush(org.testng.ITestResult)[pri:0, instance:runnerfile.TestRunner@6f10d5b6]" started-at="2022-07-31T00:39:18Z" name="reportFlush" finished-at="2022-07-31T00:39:18Z" duration-ms="32" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=feature status=FAILURE method=AbstractTestNGCucumberTests.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:runnerfile.TestRunner@6f10d5b6] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reportFlush -->
+        <test-method is-config="true" signature="startTest(java.lang.reflect.Method)[pri:0, instance:runnerfile.TestRunner@6f10d5b6]" started-at="2022-07-31T00:39:18Z" name="startTest" finished-at="2022-07-31T00:39:18Z" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void cucumber.api.testng.AbstractTestNGCucumberTests.feature(cucumber.api.testng.CucumberFeatureWrapper)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTest -->
+        <test-method signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:runnerfile.TestRunner@6f10d5b6]" started-at="2022-07-31T00:39:18Z" name="feature" description="Runs Cucumber Feature" data-provider="features" finished-at="2022-07-31T00:39:24Z" duration-ms="6504" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Testing Zoom In feature]]>
+              </value>
+            </param>
+          </params>
+          <exception class="cucumber.runtime.CucumberException">
+            <message>
+              <![CDATA[java.lang.NoClassDefFoundError: Could not initialize class cucumber.deps.com.thoughtworks.xstream.converters.collections.TreeMapConverter]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[cucumber.runtime.CucumberException: java.lang.NoClassDefFoundError: Could not initialize class cucumber.deps.com.thoughtworks.xstream.converters.collections.TreeMapConverter
+	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:69)
+	at cucumber.api.testng.AbstractTestNGCucumberTests.feature(AbstractTestNGCucumberTests.java:21)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.lang.NoClassDefFoundError: Could not initialize class cucumber.deps.com.thoughtworks.xstream.converters.collections.TreeMapConverter
+	at cucumber.deps.com.thoughtworks.xstream.XStream.setupConverters(XStream.java:820)
+	at cucumber.deps.com.thoughtworks.xstream.XStream.<init>(XStream.java:574)
+	at cucumber.deps.com.thoughtworks.xstream.XStream.<init>(XStream.java:530)
+	at cucumber.runtime.xstream.LocalizedXStreams$LocalizedXStream.<init>(LocalizedXStreams.java:50)
+	at cucumber.runtime.xstream.LocalizedXStreams.newXStream(LocalizedXStreams.java:37)
+	at cucumber.runtime.xstream.LocalizedXStreams.get(LocalizedXStreams.java:29)
+	at cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:37)
+	at cucumber.runtime.Runtime.runStep(Runtime.java:300)
+	at cucumber.runtime.model.StepContainer.runStep(StepContainer.java:44)
+	at cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:39)
+	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:44)
+	at cucumber.runtime.model.CucumberFeature.run(CucumberFeature.java:165)
+	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:63)
+	at cucumber.api.testng.AbstractTestNGCucumberTests.feature(AbstractTestNGCucumberTests.java:21)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+	at ✽.Given I am in the interface and clicking on App(zoomIn.feature:7)
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.reflect.InaccessibleObjectException: Unable to make field private final java.util.Comparator java.util.TreeMap.comparator accessible: module java.base does not "opens java.util" to unnamed module @32a1bec0 [in thread "main"]
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:354)
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:297)
+	at java.base/java.lang.reflect.Field.checkCanSetAccessible(Field.java:180)
+	at java.base/java.lang.reflect.Field.setAccessible(Field.java:174)
+	at cucumber.deps.com.thoughtworks.xstream.core.util.Fields.locate(Fields.java:39)
+	at cucumber.deps.com.thoughtworks.xstream.converters.collections.TreeMapConverter.<clinit>(TreeMapConverter.java:50)
+	at cucumber.deps.com.thoughtworks.xstream.XStream.setupConverters(XStream.java:820)
+	at cucumber.deps.com.thoughtworks.xstream.XStream.<init>(XStream.java:574)
+	at cucumber.deps.com.thoughtworks.xstream.XStream.<init>(XStream.java:530)
+	at cucumber.runtime.xstream.LocalizedXStreams$LocalizedXStream.<init>(LocalizedXStreams.java:50)
+	at cucumber.runtime.xstream.LocalizedXStreams.newXStream(LocalizedXStreams.java:37)
+	at cucumber.runtime.xstream.LocalizedXStreams.get(LocalizedXStreams.java:29)
+	at cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:37)
+	at cucumber.runtime.Runtime.runStep(Runtime.java:300)
+	at cucumber.runtime.model.StepContainer.runStep(StepContainer.java:44)
+	at cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:39)
+	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:44)
+	at cucumber.runtime.model.CucumberFeature.run(CucumberFeature.java:165)
+	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:63)
+	at cucumber.api.testng.AbstractTestNGCucumberTests.feature(AbstractTestNGCucumberTests.java:21)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- cucumber.runtime.CucumberException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method is-config="true" signature="reportFlush(org.testng.ITestResult)[pri:0, instance:runnerfile.TestRunner@6f10d5b6]" started-at="2022-07-31T00:39:24Z" name="reportFlush" finished-at="2022-07-31T00:39:24Z" duration-ms="43" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=feature status=FAILURE method=AbstractTestNGCucumberTests.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:runnerfile.TestRunner@6f10d5b6] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reportFlush -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runnerfile.TestRunner@6f10d5b6]" started-at="2022-07-31T00:39:24Z" name="tearDownClass" finished-at="2022-07-31T00:39:24Z" duration-ms="40" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+        <test-method is-config="true" signature="stop()[pri:0, instance:runnerfile.TestRunner@6f10d5b6]" started-at="2022-07-31T00:39:24Z" name="stop" finished-at="2022-07-31T00:39:24Z" duration-ms="52" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stop -->
+      </class> <!-- runnerfile.TestRunner -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
